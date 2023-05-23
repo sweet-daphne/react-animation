@@ -1,6 +1,5 @@
 import { styled } from 'styled-components';
 import { motion } from 'framer-motion';
-import { stringify } from 'querystring';
 
 const Wrapper = styled.div`
   height: 100vh;

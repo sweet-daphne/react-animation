@@ -1,4 +1,4 @@
-# https://sweet-daphne.github.io/repository-name
+# https://sweet-daphne.github.io/react-animation
 
 # Getting Started with Create React App
 
