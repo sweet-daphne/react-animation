@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
-import { motion } from 'framer-motion';
-import { useRef } from 'react';
+import { motion, useMotionValue, useMotionValueEvent } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -73,6 +73,7 @@ function App() {
 }
 */
 
+/* gesture
 const Box = styled(motion.div)`
   width: 200px;
   height: 200px;
@@ -101,6 +102,7 @@ const boxVariants = {
   },
 };
 
+
 function App() {
   const biggerBoxRef = useRef<HTMLDivElement>(null);
   return (
@@ -116,6 +118,28 @@ function App() {
           whileTap="click"
         />
       </BiggerBox>
+    </Wrapper>
+  );
+}
+*/
+
+const Box = styled(motion.div)`
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 40px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+`;
+
+function App() {
+  const x = useMotionValue(0);
+  useMotionValueEvent(x, 'change', (x) => {
+    console.log(x);
+  });
+
+  return (
+    <Wrapper>
+      <Box style={{ x }} drag="x" dragSnapToOrigin />
     </Wrapper>
   );
 }
