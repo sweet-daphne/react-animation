@@ -1,5 +1,10 @@
 import { styled } from 'styled-components';
-import { motion, useMotionValue, useMotionValueEvent } from 'framer-motion';
+import {
+  motion,
+  useMotionValue,
+  useMotionValueEvent,
+  useTransform,
+} from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
 const Wrapper = styled.div`
@@ -133,13 +138,14 @@ const Box = styled(motion.div)`
 
 function App() {
   const x = useMotionValue(0);
-  useMotionValueEvent(x, 'change', (x) => {
+  const potato = useTransform(x, [-800, 0, 800], [2, 1, 0.1]);
+  useMotionValueEvent(potato, 'change', (x) => {
     console.log(x);
   });
 
   return (
     <Wrapper>
-      <Box style={{ x }} drag="x" dragSnapToOrigin />
+      <Box style={{ x, scale: potato }} drag="x" dragSnapToOrigin />
     </Wrapper>
   );
 }
