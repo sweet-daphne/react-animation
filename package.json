@@ -48,5 +48,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://sweet-daphne.github.io/react-animation"
+  "homepage": "https://sweet-daphne.github.io/react-animation",
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3"
+  }
 }
