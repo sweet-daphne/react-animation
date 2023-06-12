@@ -42,6 +42,9 @@ function Header() {
       <Link to={'/moveobject'}>
         <Button>MoveObject</Button>
       </Link>
+      <Link to={'/hoverscale'}>
+        <Button>HoverScale</Button>
+      </Link>
     </Div>
   );
 }

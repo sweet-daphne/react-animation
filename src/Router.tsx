@@ -6,6 +6,7 @@ import SvgAnimation from './routes/SvgAnimation';
 import AniPresence from './routes/AniPresence';
 import Slider from './routes/Slider';
 import MoveObject from './routes/MoveObject';
+import HoverScale from './routes/HoverScale';
 
 function Router() {
   return (
@@ -31,6 +32,9 @@ function Router() {
         </Route>
         <Route path="/moveobject">
           <MoveObject />
+        </Route>
+        <Route path="/hoverscale">
+          <HoverScale />
         </Route>
         <Route path="/">
           <Variants />
